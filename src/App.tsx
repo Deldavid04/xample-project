@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import NavItems from './components/NavItems';
+import { Heading, Stack, HStack, VStack, useColorMode } from '@chakra-ui/react';
+import Home from './components/Home';
+import About from './components/About';
+import SignUpContainer from './components/form/SignUpContainer';
 
 function App() {
+  const { colorMode } = useColorMode();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavItems />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='about' element={<About />} />
+        <Route path='register' element={<SignUpContainer />} />
+      </Routes>
     </div>
   );
 }
