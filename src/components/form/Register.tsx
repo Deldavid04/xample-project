@@ -1,3 +1,5 @@
+import { Link, useNavigate } from 'react-router-dom';
+
 import {
   FormControl,
   FormLabel,
@@ -40,6 +42,8 @@ const schema = yup
   .required();
 
 const Register = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -52,6 +56,7 @@ const Register = () => {
   const onSubmit: SubmitHandler<FormData> = (data: FormData) => {
     console.log('data', data);
     reset();
+    navigate('/home');
   };
   return (
     <VStack spacing={8}>

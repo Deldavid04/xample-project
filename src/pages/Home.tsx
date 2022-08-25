@@ -1,10 +1,11 @@
 import { Stack, HStack, VStack, Text } from '@chakra-ui/react';
-import SignInContainer from './form/SignInContainer';
+import SignInContainer from '../components/form/SignInContainer';
 
 const Home = () => {
   return (
     <VStack height='80vh'>
-      <SignInContainer />
+      {/* <SignInContainer /> */}
+      <Text>Working Home Page</Text>
     </VStack>
   );
 };

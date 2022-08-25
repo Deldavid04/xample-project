@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -27,6 +27,8 @@ const schema: yup.SchemaOf<Partial<FormInputs>> = yup
   .required();
 
 const LogIn = () => {
+  const navigate = useNavigate();
+
   const { colorMode, toggleColorMode } = useColorMode();
 
   const { handleSubmit, control, formState } = useForm<FormInputs>({
@@ -35,6 +37,7 @@ const LogIn = () => {
 
   const onSubmit: SubmitHandler<FormInputs> = (data: FormInputs) => {
     console.log(data);
+    navigate('/home');
   };
   return (
     <VStack>
