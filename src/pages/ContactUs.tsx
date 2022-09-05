@@ -1,16 +1,12 @@
 import * as React from 'react';
-import { SubmitHandler, useForm, useFormState } from 'react-hook-form';
 
 import {
   Image,
   Stack,
-  HStack,
   VStack,
   Text,
   FormControl,
   FormLabel,
-  FormErrorMessage,
-  FormHelperText,
   Input,
   Button,
 } from '@chakra-ui/react';

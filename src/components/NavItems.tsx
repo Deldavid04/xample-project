@@ -35,6 +35,12 @@ const NavItems: React.FC<{}> = () => {
             <a>Contact Us</a>
           </Link>
         </Button>
+
+        <Button variant='link' colorScheme='blue'>
+          <Link to='/gallery'>
+            <a>Gallery</a>
+          </Link>
+        </Button>
       </HStack>
 
       <HStack>
